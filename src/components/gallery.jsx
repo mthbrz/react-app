@@ -1,25 +1,30 @@
 import React from 'react'
 import './gallery.css'
+import { NavLink } from 'react-router-dom'
 
-function gallery() {
+function Gallery() {
   return (
     <div className="gallery">
-        <div className="gallery-cards">
+        <NavLink to="/apartment" className="gallery-cards">
             <h3>Titre de la location</h3>
-        </div>
-        <div className="gallery-cards">
+        </NavLink>
+        <NavLink to="/apartment" className="gallery-cards">
             <h3>Titre de la location</h3>
-        </div><div className="gallery-cards">
+        </NavLink>
+        <NavLink to="/apartment" className="gallery-cards">
             <h3>Titre de la location</h3>
-        </div><div className="gallery-cards">
+       </NavLink>
+        <NavLink to="/apartment" className="gallery-cards">
             <h3>Titre de la location</h3>
-        </div><div className="gallery-cards">
+       </NavLink>
+        <NavLink to="/apartment" className="gallery-cards">
             <h3>Titre de la location</h3>
-        </div><div className="gallery-cards">
+        </NavLink>
+        <NavLink to="/apartment" className="gallery-cards">
             <h3>Titre de la location</h3>
-        </div>
+        </NavLink>
     </div>
   )
 }
 
-export default gallery
+export default Gallery

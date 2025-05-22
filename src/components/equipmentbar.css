@@ -1,0 +1,23 @@
+.equipmentbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.equipmentbar .description-bar {
+  margin: 3rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .equipmentbar {
+    flex-direction: column;
+  }
+  .equipmentbar .description-bar {
+    margin: 1rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .equipmentbar .description-bar {
+    width: 50%;
+  }
+}

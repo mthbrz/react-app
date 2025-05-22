@@ -1,7 +1,7 @@
 import React from 'react'
 import './banner.css'
 
-function banner() {
+function Banner() {
   return (
     <div className='banner'>
         <h1> Chez vous, partout et ailleurs</h1>
@@ -9,4 +9,4 @@ function banner() {
   )
 }
 
-export default banner
+export default Banner

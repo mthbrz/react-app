@@ -1,11 +1,17 @@
 import React from 'react'
+import Bannerabout from '../components/bannerabout.jsx'
+import DescriptionBar from '../components/descriptionbar.jsx'
 
-function about() {
+function About() {
   return (
     <div>
-      <h1>A propos</h1>
+      <Bannerabout/>
+      <DescriptionBar title={"mon super titre"}/>
+      <DescriptionBar title2={"mon super titre 2"}/>
+      <DescriptionBar/>
+      <DescriptionBar/>
     </div>
   )
 }
 
-export default about
+export default About
