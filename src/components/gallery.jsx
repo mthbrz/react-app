@@ -1,30 +1,31 @@
-import React from 'react'
-import './gallery.css'
-import { NavLink } from 'react-router-dom'
+import React, { use } from 'react'
+import ApartmentCard from './apartmentcard.jsx'
+import './apartmentcard.css'
 
 function Gallery() {
+    const [apartments, setApartments] = React.useState([]);
+
+    React.useEffect(fetchApartments , []);
+
+    function fetchApartments() {    
+        fetch("file.json")
+        .then((res)=>res.json())
+        .then((res)=>setApartments(res))
+        .catch(console.error);
+}
+
   return (
     <div className="gallery">
-        <NavLink to="/apartment" className="gallery-cards">
-            <h3>Titre de la location</h3>
-        </NavLink>
-        <NavLink to="/apartment" className="gallery-cards">
-            <h3>Titre de la location</h3>
-        </NavLink>
-        <NavLink to="/apartment" className="gallery-cards">
-            <h3>Titre de la location</h3>
-       </NavLink>
-        <NavLink to="/apartment" className="gallery-cards">
-            <h3>Titre de la location</h3>
-       </NavLink>
-        <NavLink to="/apartment" className="gallery-cards">
-            <h3>Titre de la location</h3>
-        </NavLink>
-        <NavLink to="/apartment" className="gallery-cards">
-            <h3>Titre de la location</h3>
-        </NavLink>
+
+    {apartments.map((apartment) => 
+      <ApartmentCard key={apartment.id} id={apartment.id}
+      title={apartment.title} imageUrl={apartment.cover}/>
+    )}
     </div>
   )
 }
 
 export default Gallery
+
+
+

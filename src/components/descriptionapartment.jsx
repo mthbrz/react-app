@@ -1,33 +1,34 @@
 import React from 'react'
 import './descriptionapartment.css'
 
-function Descriptionaparment() {
+function Descriptionapartment(props) {
+
+const name = props.host.name
+const [firstName, lastName] = name.split(' ');
+
   return (
     <div className='header-flat'>
         <div className='flat-presentation'>
-            <h1>Cozy loft on the Canal Saint-Martin</h1>
-            <h2>Paris, Île-de-France</h2>
+            <h1>{props.title}</h1>
+            <h2>{props.location}</h2>
             <div className='flat-categories'>
-                <h3>Cozy</h3>
-                <h3>Canal</h3>
-                <h3>Paris 10</h3>
+                {props.tags.map((tag) => (<h3 key={tag}>{tag}</h3>))}
             </div>
         </div>
         <div className='owner-section'>
             <div className='owner-presentation'>
-                <h2><span>Alexandre</span><span>Dumas</span></h2>
-                <div className='badge'></div>
+                <h2><span>{firstName}</span><span>{lastName}</span></h2>
+                <div className='badge'style={{ backgroundImage: `url(${props.host.picture})`}}></div>
             </div>
-            <div className='rating'>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
+            <div className="rating">
+                {[1, 2, 3, 4, 5].map((num) => (
+            <i key={num} className={`fa-star fa-solid ${props.rating >= num ? 'active' : 'inactive'}`}></i>
+                ))}
+            </div>
+
             </div>
         </div>
-    </div>
   )
 }
 
-export default Descriptionaparment
+export default Descriptionapartment

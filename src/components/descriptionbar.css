@@ -1,16 +1,28 @@
+.equipmentbar {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 3rem;
+}
+
+.equipmentbar .description-bar {
+  margin-block: 0;
+  margin-top: 1rem;
+}
+
 .description-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(255, 96, 96, 1);
   border-radius: 5px;
-  margin-inline: 8rem;
   margin-bottom: 1.5rem;
 }
-.description-bar h1 {
+.description-title {
   padding-left: 20px;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 700;
 }
 .description-bar i {
   color: white;
@@ -19,9 +31,24 @@
   cursor: pointer;
 }
 
+.description-content {
+  border-radius: 5px;
+  background-color: rgba(246, 246, 246, 1);
+  font-size: 16px;
+}
+.description-text {
+  padding-inline: 20px;
+  text-align: justify;
+}
+
 @media screen and (max-width: 768px) {
+  .equipmentbar {
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+  }
   .description-bar {
-    margin: 1rem;
+    margin: 0;
   }
   .description-bar h1 {
     font-size: 20px;

@@ -2,7 +2,6 @@
   position: relative;
   height: 410px;
   border-radius: 25px;
-  background-image: url("/public/accomodation.png");
   background-size: cover;
   background-position: center;
   display: flex;
