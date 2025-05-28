@@ -35,10 +35,14 @@
   border-radius: 5px;
   background-color: rgba(246, 246, 246, 1);
   font-size: 16px;
-}
-.description-text {
   padding-inline: 20px;
   text-align: justify;
+}
+.description-content .hidden {
+  display: none;
+}
+.description-content .visible {
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
