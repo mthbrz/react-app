@@ -5,10 +5,22 @@
   gap: 3rem;
 }
 
+.descriptionbar-container-about {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 8rem;
+  margin-bottom: 3rem;
+}
+
 @media screen and (max-width: 768px) {
   .descriptionbar-container {
     flex-direction: column;
     margin-inline: 1rem;
     gap: 0;
+  }
+  .descriptionbar-container-about {
+    margin-inline: 1rem;
+    gap: 0;
+    margin-bottom: 1rem;
   }
 }

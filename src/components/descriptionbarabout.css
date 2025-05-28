@@ -1,11 +1,11 @@
-.equipmentbar {
+.equipmentbarabout {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.equipmentbar .description-bar {
+.equipmentbarabout .description-bar {
   margin-block: 0;
   margin-top: 1rem;
 }
@@ -29,12 +29,6 @@
   font-size: 24px;
   padding-right: 20px;
   cursor: pointer;
-  transition: transform 0.4s ease;
-  transform-origin: center;
-}
-
-.description-bar i.rotate {
-  transform: rotateX(180deg);
 }
 
 .description-content {
@@ -43,24 +37,12 @@
   font-size: 16px;
   padding-inline: 20px;
   text-align: justify;
-  overflow: hidden;
 }
 .description-content .hidden {
-  animation: slideIn 0.5s ease-in-out forwards;
+  display: none;
 }
 .description-content .visible {
-  animation: slideIn 0.5s ease-in-out forwards;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  display: block;
 }
 
 @media screen and (max-width: 768px) {

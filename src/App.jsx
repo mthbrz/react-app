@@ -21,8 +21,9 @@ function App() {
       <Route path="/" element={<HeaderFooterLayout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/apartment" element={<Apartment/>} />
+        <Route path="/apartment/:id" element={<Apartment/>} />
         <Route path="*" element={<Error />}/>
+        <Route path="/404" element={<Error />}/>
       </Route>
 
     </Routes>
