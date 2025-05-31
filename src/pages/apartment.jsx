@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import Bannerapartment from '../components/bannerapartment';
-import Descriptionapartment from '../components/descriptionapartment';
-import Descriptionbar from '../components/descriptionbar';
-import '../components/descriptionbar-container.css';
+import Slider from '../components/jsx/slider.jsx';
+import Descriptionapartment from '../components/jsx/descriptionapartment.jsx';
+import Collapse from '../components/jsx/collapse.jsx';
+
 
 function Apartment() {
   const { id } = useParams();
@@ -37,7 +37,7 @@ function Apartment() {
 
   return (
     <div>
-      <Bannerapartment pictures={selectedApartment.pictures} />
+      <Slider pictures={selectedApartment.pictures} />
       <Descriptionapartment 
         title={selectedApartment.title} 
         location={selectedApartment.location}
@@ -46,13 +46,8 @@ function Apartment() {
         rating={selectedApartment.rating}
       />  
       <div className='descriptionbar-container'>
-        <Descriptionbar title="Description" content={selectedApartment.description} />  
-        <Descriptionbar 
-          title="Equipements" 
-          content={selectedApartment.equipments.map((equipment) => (
-            <li key={equipment}>{equipment}</li>
-          ))}
-        />  
+        <Collapse title="Description" content={selectedApartment.description} />  
+        <Collapse title="Equipements" content={selectedApartment.equipments}/>  
       </div>
     </div>
   );

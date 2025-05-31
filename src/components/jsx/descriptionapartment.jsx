@@ -1,5 +1,5 @@
 import React from 'react'
-import './descriptionapartment.css'
+import '../css/descriptionapartment.css'
 
 function Descriptionapartment(props) {
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import './bannerapartment.css'
+import '../css/slider.css'
 
-function Bannerapartment(props) {
+function Slider(props) {
 
   const pictures = props.pictures;
 
@@ -24,9 +24,6 @@ function Bannerapartment(props) {
       {pictures.map((pic, i) => (
         <img key={pic} src={pic} alt="" className={getClassName(i)}></img>
       ))} 
-
-     
-
       {pictures.length > 1 && (
         <>
          <div className='bannerflat-counter'>
@@ -38,8 +35,7 @@ function Bannerapartment(props) {
         </div>
         </>)
         }
-    </div>
-    
+    </div> 
   )
 }
-export default Bannerapartment
+export default Slider

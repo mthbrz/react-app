@@ -1,6 +1,6 @@
-import React, { use } from 'react'
-import ApartmentCard from './apartmentcard.jsx'
-import './apartmentcard.css'
+import React from 'react'
+import ApartmentCard from '../jsx/apartmentcard.jsx'
+import '../css/apartmentcard.css'
 
 function Gallery() {
     const [apartments, setApartments] = React.useState([]);

@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import '../components/notfound.css'
+import '../components/css/notfound.css'
 
 function Error() {
   return (

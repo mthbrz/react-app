@@ -1,5 +1,5 @@
 import React from 'react'
-import './apartmentcard.css'
+import '../css/apartmentcard.css'
 import { NavLink } from 'react-router-dom'
 
 function ApartmentCard(props) {
