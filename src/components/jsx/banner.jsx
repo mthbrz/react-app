@@ -6,10 +6,10 @@ function Banner({ page }) {
   let showText = false
 
   if (page === 'home') {
-    backgroundImage = '/banner.png'
+    backgroundImage = './banner.png'
     showText = true
   } else if (page === 'about') {
-    backgroundImage = '/banner-about.png'
+    backgroundImage = './banner-about.png'
     showText = false
   }
 
