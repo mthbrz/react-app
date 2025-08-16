@@ -1,14 +1,15 @@
 import React from 'react'
 import '../css/banner.css'
-import bannerHome from '../../assets/banner.png'
-import bannerAbout from '../../assets/banner-about.png'
+
+const banner = `${import.meta.env.BASE_URL}banner.png`
+const bannerAbout = `${import.meta.env.BASE_URL}banner-about.png`
 
 function Banner({ page }) {
   let backgroundImage = ''
   let showText = false
 
   if (page === 'home') {
-    backgroundImage = bannerHome
+    backgroundImage = banner
     showText = true
   } else if (page === 'about') {
     backgroundImage = bannerAbout
