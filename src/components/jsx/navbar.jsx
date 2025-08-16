@@ -1,7 +1,9 @@
 import React from "react";
 import "../css/navbar.css";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+
+const logo = `${import.meta.env.BASE_URL}logo.png`
+
 
 function Navbar() {
   return (
@@ -9,7 +11,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-logo">
           <NavLink to="/">
-            <img src={Logo} alt="logo" />
+            <img src={logo} alt="logo" />
           </NavLink>
         </div>
         <div className="navbar-links">

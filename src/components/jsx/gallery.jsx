@@ -8,7 +8,7 @@ function Gallery() {
     React.useEffect(fetchApartments , []);
 
     function fetchApartments() {    
-        fetch("file.json")
+        fetch(import.meta.env.BASE_URL + "file.json")
         .then((res)=>res.json())
         .then((res)=>setApartments(res))
         .catch(console.error);

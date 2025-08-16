@@ -11,7 +11,7 @@ function Apartment() {
   const [isNotFound, setIsNotFound] = useState(false);
 
   useEffect(() => {
-    fetch("/file.json") 
+  fetch(import.meta.env.BASE_URL + "file.json")
       .then((res) => res.json())
       .then((apartments) => {
         const apartment = apartments.find((apt) => apt.id === id);
